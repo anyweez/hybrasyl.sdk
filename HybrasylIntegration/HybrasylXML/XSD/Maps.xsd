@@ -88,11 +88,10 @@
   <!-- Spawn subelement -->
   <xs:complexType name="Spawn">
     <xs:sequence>
-      <xs:element name="name" type="hyb:String8" minOccurs="1" maxOccurs="1" />
-      <xs:element name="description" type="hyb:String16" minOccurs="0" maxOccurs="1" />
       <xs:element name="strategy" type="hyb:String8" default="random" minOccurs="0" maxOccurs="1" />
       <xs:element name="spawnModifiers" type="maps:SpawnModifiers" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
+    <xs:attribute name="mob" type="xs:int" use="required" />
     <xs:attribute name="interval" type="xs:nonNegativeInteger" />
     <xs:attribute name="checkInterval" type="xs:nonNegativeInteger" />
   </xs:complexType>

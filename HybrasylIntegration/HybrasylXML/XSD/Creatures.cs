@@ -40,6 +40,9 @@ namespace Hybrasyl.XSD
     {
         private Properties _properties;
 
+        [XmlAttributeAttribute("id")]
+        public ushort Id { get; set; }
+
         [XmlElementAttribute("name")]
         public string Name { get; set; }
 
