@@ -914,12 +914,15 @@ namespace Hybrasyl.XSD
     {
         private SpawnModifiers _spawnModifiers;
 
+        [XmlElementAttribute("name")]
+        public string Name { get; set; }
+
+        [XmlElementAttribute("description")]
+        public string Description { get; set; }
+
         [DefaultValueAttribute("random")]
         [XmlElementAttribute("strategy")]
         public string Strategy { get; set; }
-
-        [XmlAttributeAttribute(AttributeName = "mob")]
-        public int MobId { get; set; }
 
         [XmlAttributeAttribute(DataType = "nonNegativeInteger", AttributeName = "interval")]
         public string Interval { get; set; }
